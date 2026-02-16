@@ -1,0 +1,23 @@
+# Package metadata
+name: owlshed_analysis
+description: A package for owl-shed analysis related things.
+homepage: https://github.com/owl-shed/dart-analysis
+repository: https://github.com/owl-shed/dart-analysis
+version: 1.0.0
+topics:
+  - lints
+
+
+## Author info
+funding:
+  - https://ko-fi.com/nightowl286
+  - https://github.com/sponsors/nightowl286
+
+
+# Pacakge details
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  lints: ^6.0.0
+  flutter_lints: ^6.0.0

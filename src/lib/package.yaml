@@ -1,0 +1,6 @@
+include: general.yaml
+include: web.yaml # Packages shouldn't unnecessarily discriminate, even if webdev should be discriminated against.
+
+linter:
+  rules:
+    unnecessary_library_directive: true # Packages should be more explicit about mini-libraries.
