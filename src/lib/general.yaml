@@ -1,6 +1,6 @@
 # The base lints are still included to make sure
 include:
-  - package:lints/recommended.yaml
+  # - package:lints/recommended.yaml # Don't actually include it it because dart doesn't like that.
   - package:flutter_lints/flutter.yaml
 
 analyzer:
@@ -74,7 +74,7 @@ linter:
     null_closures: true
     overridden_fields: true
     package_names: true
-    prefer_adjacent_string_concatenation: true
+    prefer_adjacent_string_concatenation: false # This is overriden, defaults to true. Adject string concatenation is weird, do not do it, just don't, what the heck dart.
     prefer_collection_literals: true
     prefer_conditional_assignment: true
     prefer_contains: true
@@ -179,7 +179,7 @@ linter:
     comment_references: true # Might be flaky, we'll see.
 
     # package_prefixed_library_names: # I don't get it, this is weird...
-    parameter_assignments:true # VERY situational, don't force it one way or another. Seems it checks for ??= so it might end up okay. We'll see.
+    parameter_assignments: true # VERY situational, don't force it one way or another. Seems it checks for ??= so it might end up okay. We'll see.
     prefer_foreach: true # There's a note attached to the lint about it changing semantics, I hope the linter is good enough to check for that.
     prefer_if_elements_to_conditional_expressions: true # I hope this accounts for the else clause too.
 
@@ -197,13 +197,6 @@ linter:
     # sized_box_shrink_expand:
     # use_colored_box:
     # use_decorated_box:
-
-
-
-
-
-    ############ owl-shed OVERRIDES (for recommended.yaml / flutter.yaml, core.yaml will NEVER be overridden)
-    prefer_adjacent_string_concatenation: false # Adject string concatenation is weird, do not do it, just don't, what the heck dart.
 
 
 

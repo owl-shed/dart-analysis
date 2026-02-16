@@ -1,5 +1,5 @@
 include:
-  - general.yaml
+  # - general.yaml # Don't actually include since web.yaml includes it and dart doesn't like that.
   - web.yaml # Packages shouldn't unnecessarily discriminate, even if webdev should be discriminated against.
 
 linter:
