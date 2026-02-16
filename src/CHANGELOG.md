@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Fix *very* silly dart errors about duplicate includes.
+
 ## 1.0.1
 
 - Updated the package description to go over the 50 character threshold. \
