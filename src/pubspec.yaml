@@ -3,7 +3,7 @@ name: owl_analysis
 description: This is a package for owl-shed analysis related things.
 homepage: https://github.com/owl-shed/dart-analysis
 repository: https://github.com/owl-shed/dart-analysis
-version: 1.0.0
+version: 1.0.1
 topics:
   - lints
 
