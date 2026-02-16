@@ -1,0 +1,18 @@
+linter:
+  rules:
+    omit_obvious_local_variable_types: false # I like my type annotations
+    omit_obvious_property_types: false
+    specify_nonobvious_local_variable_types: true
+    specify_nonobvious_property_types: true
+
+    unnecessary_async: true
+    unnecessary_null_checks: true
+    use_late_for_private_fields_and_variables: true
+
+    # I don't really get the rest so leaving them for now.
+    # unsafe_variance:
+    # annotate_redeclares:
+    # avoid_futureor_void:
+    # implicit_reopen:
+    # invalid_case_patterns:
+    # no_default_cases:
