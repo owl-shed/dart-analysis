@@ -35,12 +35,12 @@ experimental.
 
 ```yaml
 # In analysis_options.yaml
-include: package:owlshed_analysis/general.yaml
+include: package:owl_analysis/general.yaml
 
 # Or
 include:
-  - package:owlshed_analysis/package.yaml
-  - package:owlshed_analysis/experimental.yaml
+  - package:owl_analysis/package.yaml
+  - package:owl_analysis/experimental.yaml
 ```
 
 

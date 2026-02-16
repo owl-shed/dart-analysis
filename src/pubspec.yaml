@@ -1,5 +1,5 @@
 # Package metadata
-name: owlshed_analysis
+name: owl_analysis
 description: A package for owl-shed analysis related things.
 homepage: https://github.com/owl-shed/dart-analysis
 repository: https://github.com/owl-shed/dart-analysis
