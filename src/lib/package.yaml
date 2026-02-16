@@ -1,5 +1,6 @@
-include: general.yaml
-include: web.yaml # Packages shouldn't unnecessarily discriminate, even if webdev should be discriminated against.
+include:
+  - general.yaml
+  - web.yaml # Packages shouldn't unnecessarily discriminate, even if webdev should be discriminated against.
 
 linter:
   rules:
