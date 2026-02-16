@@ -11,7 +11,7 @@ analyzer:
 
 linter:
   rules:
-    # lints (core)
+    ############ lints (core)
     avoid_empty_else: true
     avoid_relative_lib_imports: true
     avoid_shadowing_type_parameters: true
@@ -49,7 +49,10 @@ linter:
     void_checks: true
 
 
-    # lints (recommended)
+
+
+
+    ############ lints (recommended)
     annotate_overrides: true
     avoid_function_literals_in_foreach_calls: true
     avoid_init_to_null: true
@@ -109,7 +112,10 @@ linter:
     use_super_parameters: true
 
 
-    # flutter_lints
+
+
+
+    ############ flutter_lints
     avoid_print: true
     avoid_unnecessary_containers: true
     avoid_web_libraries_in_flutter: true
@@ -122,7 +128,10 @@ linter:
     use_key_in_widget_constructors: true
 
 
-    # Removed, kept here for posterity (leave them alone alone)
+
+
+
+    ############ These have been removed from dart now, I'm keeping them here for posterity (leave them alone).
     # always_require_non_null_named_parameters:
     # avoid_as:
     # avoid_final_parameters: # Why did dart remove this, it would've been quite useful.
@@ -139,7 +148,10 @@ linter:
     # use_if_null_to_convert_nulls_to_bools:
 
 
-    # Experimental (also leave them alone)
+
+
+
+    ############ These lints are still considered experimental, and they are only changed in the experimental.yaml file.
     # annotate_redeclares:
     # avoid_futureor_void:
     # implicit_reopen:
@@ -155,30 +167,49 @@ linter:
     # use_late_for_private_fields_and_variables:
 
 
-    # I am conflicted.
+
+
+
+    ############ These lints I am unsure about, as they seem like they could be problematic.
     avoid_setters_without_getters: true # There should be situations where this useful and the analyser can't tell, we'll see how I get on.
+
     # Name is confusing this is actually inverted, rule makes it so that you DONT do this.
     # Might be situational, sometimes you may want to purposefully do the cast to disallow null values, but then you might often be using (if a is Type) instead, will have to see.
     cast_nullable_to_non_nullable: true
     comment_references: true # Might be flaky, we'll see.
-    # diagnostic_describe_all_properties: TBD # This seems like a flutter thing, I don't know what I want to do with it yet.
+
     # package_prefixed_library_names: # I don't get it, this is weird...
     parameter_assignments:true # VERY situational, don't force it one way or another. Seems it checks for ??= so it might end up okay. We'll see.
     prefer_foreach: true # There's a note attached to the lint about it changing semantics, I hope the linter is good enough to check for that.
     prefer_if_elements_to_conditional_expressions: true # I hope this accounts for the else clause too.
-    # sized_box_shrink_expand: # flutter thing
+
     unnecessary_await_in_return: true # If this is anything like C#, then this could cause stack traces to be different, which could be problematic.
     unreachable_from_main: false # I feel like this could have false negatives, so use your own judgement.
-    # use_colored_box: # Flutter
-    # use_decorated_box: # Flutter
+
     use_enums: false # Linter won't be powerful enough, use your own judgement.
 
 
-    # owl-shed OVERRIDES
+
+
+
+    ############ Things I still need to figure out for flutter
+    # diagnostic_describe_all_properties: # I don't know what I want to do with it yet.
+    # sized_box_shrink_expand:
+    # use_colored_box:
+    # use_decorated_box:
+
+
+
+
+
+    ############ owl-shed OVERRIDES (for recommended.yaml / flutter.yaml, core.yaml will NEVER be overridden)
     prefer_adjacent_string_concatenation: false # Adject string concatenation is weird, do not do it, just don't, what the heck dart.
 
 
-    # owl-shed
+
+
+
+    ############ owl-shed
     always_declare_return_types: true
     always_put_control_body_on_new_line: false # Conflicts with the dart formatter (why doesn't the dart formatter just listen to this smh).
     always_put_required_named_parameters_first: true
@@ -207,7 +238,10 @@ linter:
     avoid_private_typedef_functions: true # Should only activate if the typedef is used once, at which point I'd agree it's redundant.
     avoid_redundant_argument_values: true # Explicitly passing in a value can be a declaration to use that value, rather than rely on what the default is (which could change).
     avoid_returning_this: false # Not specific enough, there are situations where this is okay.
-    avoid_slow_async_io: false # This is a weird lint. Just, weird. Prefer async if async exists, performance gain on this scale is likely a no-factor, override lint if you need to for some reason.
+
+    # This is a weird lint. Just, weird. Prefer async if async exists, performance gain on
+    # this scale is likely a no-factor, override lint if you need to for some reason.
+    avoid_slow_async_io: false
     avoid_type_to_string: false # This seems like it prevents .toString() for everything, see `no_runtimeType_toString` for the problematic version.
 
     # This is like the one situation we don't want types because it's yucky and pretty much ALWAYS
@@ -260,7 +294,10 @@ linter:
     prefer_int_literals: true
     prefer_mixin: true
     prefer_null_aware_method_calls: true
-    prefer_relative_imports: false # very situational, package import is the only way (as far as I know), to go from the root of the package, which can be much more maintable sometimes.
+
+    # very situational, package import is the only way (as far as I know), to
+    # go from the root of the package, which can be much more maintable sometimes.
+    prefer_relative_imports: false
     prefer_single_quotes: false # Double quotes for life.
     prefer_void_to_null: true
     public_member_api_docs: true
